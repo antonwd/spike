@@ -64,6 +64,7 @@ function startChat() {
         document.querySelector("#chatScreen").style.display = "none"
         document.querySelector("#loginScreen").style.display = "flex"
         socket.disconnect()
+        location.reload();
     })
 
     const buildMessageBlock = (time, user, content) => {
