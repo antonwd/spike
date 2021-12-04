@@ -1,0 +1,50 @@
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Anton's Chat</title>
+        <link rel="stylesheet" href="assets/styles/main.css">
+        <script defer src="assets/js/main.js"></script>
+        <script defer src="http://localhost:3001/socket.io/socket.io.js"></script>
+        <script defer src="assets/js/chat.js"></script>
+    </head>
+    <body>
+        <div class="wrapper">
+            <div id="loginScreen">
+                <div class="login-box">
+                    <div class="welcome">Welcome to my CHAT App</div>
+                    <div class="input">
+                        <input type="text" id="userName" value="">
+                        <span class="placeholder">Your Name</span>
+                        <button id="enterChat">Chat</button>
+                    </div>
+                </div>
+            </div>
+            <div id="chatScreen">
+                <div class="chat-wrapper">
+                    <div class="chat-container" id="chatContainer">
+                        
+                    </div>
+                    <div class="message-line">
+                        <input type="text" id="messageContent">
+                        <button id="sendMessageButton"><img src="assets/img/send_svg.svg" alt="Send a Message"></button>
+                    </div>
+                </div>
+
+                <div class="mobile-bar">
+                    <img src="assets/img/users_bar.svg" alt="See All Active Users" id="mobileBarButton">
+                </div>
+
+                <div class="participants" id="paricipantsList">
+                    <div class="on-mobile-close" id="mobileCloseParticipants">&#215;</div>
+                    <div class="title">Online Users:</div>
+                    <div class="users-list" id="usersList">
+                        
+                    </div>
+                    <div class="leave-button">
+                        <button id="leaveChatButton">Leave Chat</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

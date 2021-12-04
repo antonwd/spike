@@ -1,0 +1,278 @@
+@import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;500;600;700;800&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: #38384D;
+    color: #fff;
+    font-family: 'Baloo 2', cursive;
+}
+
+.wrapper {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: none;
+}
+
+#loginScreen {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#loginScreen .login-box {
+    border-radius: 30px;
+    background: #5a5a5a;
+    border: 5px solid #ffc400;
+    padding: 30px;
+    text-align: center;
+}
+
+#loginScreen .login-box .welcome {
+    font-weight: 600;
+    font-size: 22px;
+    color: #fff;
+    margin-bottom: 20px;
+}
+
+#loginScreen .login-box .input {
+    position: relative;
+    width: 100%;
+    margin: auto;
+    max-width: 360px;
+}
+
+#loginScreen .login-box .input input {
+    width: 100%;
+    border-radius: 15px;
+    background: #fff;
+    border: 3px solid #ffc400;
+    color: #38384D;
+    padding: 10px;
+    font-family: 'Baloo 2', cursive;
+    font-size: 16px;
+}
+
+#loginScreen .login-box .input input:focus {
+    outline: none;
+}
+
+#loginScreen .login-box .input .placeholder {
+    position: absolute;
+    top: 13px;
+    left: 13px;
+    color: #828294;
+    font-family: 'Baloo 2', cursive;
+    font-size: 18px;
+    transition: all 0.25s ease-in-out;
+    pointer-events: none;
+}
+
+#loginScreen .login-box .input .placeholder.moved {
+    font-size: 12px;
+    top: -10px;
+    left: 15px;
+    background: #ffc400;
+    color: #fff;
+    font-weight: 800;
+    padding: 0 5px;
+    border-radius: 5px;
+}
+
+#loginScreen .login-box .input button {
+    position: absolute;
+    right: 0;
+    background: #ffc400;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 800;
+    border: 3px solid #ffc400;
+    padding: 10px;
+    font-size: 16px;
+    font-family: 'Baloo 2', cursive;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+    cursor: pointer;
+}
+
+#loginScreen .login-box .input button:hover {
+    background: #ce9e00;
+    border-color: #ce9e00;
+}
+
+#chatScreen {
+    position: relative;
+    display: none;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+}
+
+#chatScreen .chat-wrapper {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+#chatScreen .chat-wrapper .chat-container {
+    overflow-y: scroll;
+    flex-grow: 1;
+    padding: 20px;
+}
+
+#chatScreen .chat-wrapper .chat-container .message {
+    display: flex;
+    padding: 15px;
+}
+
+#chatScreen .chat-wrapper .chat-container .message .time-and-name {
+    color: #b4b4c7;
+}
+
+#chatScreen .chat-wrapper .chat-container .message .time-and-name .name {
+    padding-left: 10px;
+}
+
+#chatScreen .chat-wrapper .chat-container .message .message-content {
+    padding: 0 15px;
+}
+
+#chatScreen .chat-wrapper .message-line {
+    position: relative;
+    padding: 10px;
+}
+
+#chatScreen .chat-wrapper .message-line input {
+    width: 100%;
+    padding: 10px;
+    padding-right: 75px;
+    border-radius: 15px;
+    background: #fff;
+    border: 3px solid #ffc400;
+    line-height: 37px;
+    font-size: 20px;
+    color: #38384D;
+    font-family: 'Baloo 2', cursive;
+}
+
+#chatScreen .chat-wrapper .message-line input:focus {
+    outline: none;
+}
+
+#chatScreen .chat-wrapper .message-line button {
+    position: absolute;
+    right: 10px;
+    background: #ffc400;
+    border: 3px solid #ffc400;
+    padding: 10px 15px;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+    cursor: pointer;
+}
+
+#chatScreen .mobile-bar {
+    background: #5a5a5a;
+    padding: 10px;
+}
+
+#chatScreen .mobile-bar img {
+    cursor: pointer;
+}
+
+#chatScreen .participants {
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    right: -275px;
+    top: 0;
+    background: #5a5a5a;
+    padding: 20px;
+    height: 100%;
+    width: 275px;
+    transition: all 0.3s ease-in-out;
+}
+
+#chatScreen .participants .title {
+    font-weight: 600;
+    font-size: 22px;
+    text-align: left;
+    color: #fff;
+    border-bottom: 3px solid #ffc400;
+    padding: 0 10px;
+}
+
+#chatScreen .participants .users-list {
+    flex-grow: 1;
+    overflow-y: scroll;
+    padding: 20px 0;
+}
+
+#chatScreen .participants .users-list div {
+    padding: 2px 0;
+}
+
+#chatScreen .participants .leave-button {
+    width: 100%;
+    text-align: center;
+}
+
+#chatScreen .participants .leave-button button {
+    border-radius: 15px;
+    background: #c63535;
+    border: 3px solid #c63535;
+    padding: 10px 20px;
+    width: 80%;
+    max-width: 250px;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 800;
+    font-size: 16px;
+    font-family: 'Baloo 2', cursive;
+    cursor: pointer;
+    transition: all 0.25s ease-in-out;
+}
+
+#chatScreen .participants .leave-button button:hover {
+    background: #a02c2c;
+    border: 3px solid #a02c2c;
+}
+
+#chatScreen .participants .on-mobile-close {
+    position: absolute;
+    top: 0;
+    right: 15px;
+    cursor: pointer;
+    color: #ffc400;
+    font-size: 30px;
+}
+
+#chatScreen .participants .on-mobile-close:hover {
+    color: #ce9e00;
+}
+
+@media screen and (min-width: 768px) {
+    #chatScreen .mobile-bar {
+        display: none;
+    }
+    #chatScreen .participants {
+        position: relative;
+        right: auto;
+    }
+    #chatScreen .participants .on-mobile-close {
+        display: none;
+    }
+    #loginScreen .login-box {
+        width: 60%;
+        max-width: 760px;
+    }
+}
